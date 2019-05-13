@@ -1,0 +1,45 @@
+{
+  "version": "1.0.0",
+  "cells": [
+    {
+      "type": "cs",
+      "input": "assist"
+    },
+    {
+      "type": "cs",
+      "input": "getModels"
+    },
+    {
+      "type": "cs",
+      "input": "getModel \"DRF_model_python_1553209515802_1\""
+    },
+    {
+      "type": "cs",
+      "input": "getModel \"DRF_model_python_1553209515802_1_cv_1\""
+    },
+    {
+      "type": "cs",
+      "input": "getPredictions"
+    },
+    {
+      "type": "cs",
+      "input": "getPrediction model: \"DRF_model_python_1553209515802_1\", frame: \"py_7_sid_818c\""
+    },
+    {
+      "type": "cs",
+      "input": "getPrediction model: \"DRF_model_python_1553209515802_1\", frame: \"py_8_sid_818c\""
+    },
+    {
+      "type": "cs",
+      "input": "inspect getModel \"DRF_model_python_1553209515802_1_cv_1\""
+    },
+    {
+      "type": "cs",
+      "input": "grid inspect \"parameters\", getModel \"DRF_model_python_1553209515802_1_cv_1\""
+    },
+    {
+      "type": "cs",
+      "input": "inspect getModel \"DRF_model_python_1553209515802_1\""
+    }
+  ]
+}

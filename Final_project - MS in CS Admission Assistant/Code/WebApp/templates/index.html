@@ -1,0 +1,93 @@
+{% extends "layout.html" %}
+{% block login_logout %}
+<a><span class="glyphicon glyphicon-log-in"></span><button class="btn btn-secondary my-2 my-sm-0" type="button" data-toggle="modal" data-target="#loginModal">Login</button></a>
+{% endblock %}
+
+
+
+{% block PageName %}
+<div class="content row">
+    <div class="panel panel-info">
+        <div class="panel-body" >
+
+            Sign Up
+
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block content %}
+<div>
+<div class="panel panel-info">
+    <div class="panel-body" >
+        <form method="post" action=".">
+            <input type='hidden' name='tokenfield' value='registration' />
+
+                <div id="div_id_username" class="form-group required">
+                    <label for="id_username" class="control-label col-md-4  requiredField"><a class="text-light"> Username</a><span class="asteriskField">*</span> </label>
+                    <div class="controls col-md-8 ">
+                        <input class="input-md  textinput textInput form-control" id="id_username" maxlength="30" name="username" placeholder="Choose your username" style="margin-bottom: 10px" type="text" required />
+                    </div>
+                </div>
+                <div id="div_id_email" class="form-group required">
+                    <label for="id_email" class="control-label col-md-4  requiredField"><a class="text-light"> E-mail</a><span class="asteriskField">*</span> </label>
+                    <div class="controls col-md-8 ">
+                        <input class="input-md emailinput form-control" id="id_email" name="email" placeholder="Your current email address" style="margin-bottom: 10px" type="email" required/>
+                    </div>
+                </div>
+                <div id="div_id_password1" class="form-group required">
+                    <label for="id_password1" class="control-label col-md-4  requiredField"><a class="text-light">Password</a><span class="asteriskField">*</span> </label>
+                    <div class="controls col-md-8 ">
+                        <input class="input-md textinput textInput form-control" id="id_password1" name="password1" placeholder="Create a password" style="margin-bottom: 10px" type="password" required/>
+                    </div>
+                </div>
+                <div id="div_id_name" class="form-group required">
+                    <label for="id_name" class="control-label col-md-4  requiredField"><a class="text-light"> Full Name</a><span class="asteriskField">*</span> </label>
+                    <div class="controls col-md-8 ">
+                        <input class="input-md textinput textInput form-control" id="id_name" name="name" placeholder="Your Frist name and Last name" style="margin-bottom: 10px" type="text" required/>
+                    </div>
+                </div>
+                <div id="div_id_gender" class="form-group required">
+                    <label for="id_gender"  class="control-label col-md-4  requiredField"><a class="text-light"> Gender</a><span class="asteriskField">*</span> </label>
+                    <div class="controls col-md-8 "  style="margin-bottom: 10px">
+                        <label class="radio-inline"> <input type="radio" name="gender" id="id_gender_1" value="M"  style="margin-bottom: 10px"><a class="text-light">Male</a></label>
+                        <label class="radio-inline"> <input type="radio" name="gender" id="id_gender_2" value="F"  style="margin-bottom: 10px"><a class="text-light">Female</a> </label>
+                    </div>
+                </div>
+                <div id="div_id_univ" class="form-group required">
+                    <label for="id_univ" class="control-label col-md-4  requiredField"><a class="text-light"> Undergrad University </a><span class="asteriskField">*</span> </label>
+                    <div class="controls col-md-8 ">
+                         <input class="input-md textinput textInput form-control" id="id_univ" name="univ" placeholder="your univ name" style="margin-bottom: 10px" type="text" required/>
+                    </div>
+                </div>
+                <div id="div_id_passYear" class="form-group required">
+                    <label for="id_passYear" class="control-label col-md-4  requiredField"><a class="text-light"> Year of Passing</a><span class="asteriskField">*</span> </label>
+                    <div class="controls col-md-8 ">
+                         <input class="input-md textinput textInput form-control" id="id_passYear" name="passYear" placeholder="passYear" style="margin-bottom: 10px" type="text" required/>
+                    </div>
+                </div>
+                <div id="div_id_number" class="form-group required">
+                    <label for="id_number" class="control-label col-md-4  requiredField"><a class="text-light"> Contact Number</a><span class="asteriskField">*</span> </label>
+                     <div class="controls col-md-8 ">
+                         <input class="input-md textinput textInput form-control" id="id_number" name="number" placeholder="provide your number" style="margin-bottom: 10px" type="text" required/>
+                    </div>
+                </div>
+                <div id="div_id_location" class="form-group required">
+                    <label for="id_location" class="control-label col-md-4  requiredField"><a class="text-light"> Your Location</a><span class="asteriskField">*</span> </label>
+                    <div class="controls col-md-8 ">
+                        <input class="input-md textinput textInput form-control" id="id_location" name="location" placeholder="Your Pincode and City" style="margin-bottom: 10px" type="text" required/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="aab controls col-md-4 "></div>
+                    <div class="controls col-md-8 ">
+                        <input type="submit" name="Signup" value="Signup" class="btn btn-primary btn btn-info" id="submit-id-signup" />
+                        or <input type="button" name="Signup" value="Sign Up with Facebook" class="btn btn btn-primary" id="button-id-signup" />
+                    </div>
+                </div>
+            </form>
+        </form>
+    </div>
+</div>
+</div>
+{% endblock content %}

@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+{% block login_logout %}
+<a href="/"><button class="btn btn-secondary my-2 my-sm-0" type="button">Logout</button></a>
+{% endblock %}
+
+
+{% block PageName %}
+<div class="content row">
+    <div class="panel panel-info">
+        <div class="panel-body" >
+
+            Welcome {{user_name}} to your Dashboard
+
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+            <tr  class="info">
+              <th scope="col">Student Name</th>
+              <th scope="col">Course</th>
+              <th scope="col">GRE</th>
+              <th scope="col">English Lang Score</th>
+              <th scope="col">UnderGrad CGPA</th>
+              <th scope="col">Work Ex (Months)</th>
+              <th scope="col">Papers Published</th>
+              <th scope="col">Term Applying</th>
+              <th scope="col">Prediction</th>
+            </tr>
+        </thead>
+         <tbody>
+        {% for stud in stud_list_dict %}
+           <tr style="background:white">
+              <td>{{stud.student_name}}</td>
+              <td>CS</td>
+              <td>{{stud.gre_score}}</td>
+              <td>{{stud.test_score_toefl}}</td>
+              <td>{{stud.undergraduation_score}}</td>
+              <td>{{stud.work_ex}}</td>
+               {% if stud.papers_published == 1 %}
+               <td>Local</td>
+               {% elif stud.papers_published == 2 %}
+               <td>National</td>
+               {% elif stud.papers_published == 3 %}
+               <td>International</td>
+               {% else %}
+               <td>None</td>
+               {% endif %}
+              <td>{{stud.term_applying}}</td>
+              <td style="font-weight: bold">{{pred}}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+    </div>
+{% endblock %}
+

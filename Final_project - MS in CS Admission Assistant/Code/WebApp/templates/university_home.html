@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+{% block login_logout %}
+<a href="/"><button class="btn btn-secondary my-2 my-sm-0" type="button">Logout</button></a>
+{% endblock %}
+
+
+{% block PageName %}
+<div class="content row">
+    <div class="panel panel-info">
+        <div class="panel-body" >
+
+            Welcome {{user_name}} to your Dashboard
+
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="table-responsive">
+  <table class="table">
+        <thead>
+    <tr  class="info">
+      <th scope="col">Student Name</th>
+      <th scope="col">Course</th>
+      <th scope="col">GRE</th>
+      <th scope="col">English Lang Score</th>
+      <th scope="col">UnderGrad CGPA</th>
+      <th scope="col">Work Ex (Months)</th>
+      <th scope="col">Term Applying</th>
+      <th scope="col">Action</th>
+    </tr>
+    </thead>
+     <tbody>
+    {% for stud in stud_list_dict %}
+       <tr class="success">
+          <td class="active">{{stud.student_name}}</td>
+          <td class="success">CS</td>
+          <td class="warning">{{stud.gre_score}}</td>
+          <td class="danger">{{stud.test_score_toefl}}</td>
+          <td class="warning">{{stud.undergraduation_score}}</td>
+          <td class="info">{{stud.work_ex}}</td>
+          <td class="success">{{stud.term_applying}}</td>
+          <form action="" method="POST">
+           <td class="active">
+               <input id="student_data_id" name="student_data" type="hidden" value="{{stud}}">
+              <a><button class="btn btn-secondary my-2 my-sm-0" type="submit" data-toggle="modal" data-target="#studentModal">Click</button></a>
+          </td>
+          </form>
+    </tr>
+    {% endfor %}
+
+    </tbody>
+  </table>
+</div>
+
+
+
+{% endblock %}
+

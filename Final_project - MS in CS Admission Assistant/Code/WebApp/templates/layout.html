@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <title>Graduate Admission Portal</title>
+    <link rel="stylesheet"type="text/css" href="{{ url_for('static', filename='main.css')}}">
+    <!-- meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+</head>
+<body  background="{{ url_for('static', filename='banter-snaps-12845-unsplash.jpg') }}">
+<!-- header -->
+<div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Home</a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li class="nav-item">
+                <a class="nav-link active" href="/about">About</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Predictions</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" role="menuitem" href="#">Get Recommendation</a>
+                  <a class="dropdown-item" role="menuitem" href="#">Get Admit Prediction</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">University</a>
+              </li>
+              <li class="nav-item">
+                <li><a href="/university_home"><span class="glyphicon glyphicon-magnet"></span> University Portal</a></li>
+              </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+          <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li>
+            <form class="form-inline my-2 my-lg-0" method="post">
+          <li>{% block login_logout %}{% endblock %}
+
+           </li>
+
+            </form>
+        </li>
+      </ul>
+    </div><!--/.nav-collapse -->
+
+</div>
+
+
+</div>
+<!-- end header -->
+<!--</div>-->
+    <!--<div class="wide">-->
+  	<!--<div class="col-xs-5 line"><hr></div>-->
+    <!--<div class="col-xs-2 logo">Logo</div>-->
+    <!--<div class="col-xs-5 line"><hr></div>-->
+<!--</div>-->
+<div class="container">
+  <div class="text-center">
+    <h1 style="color : black;" > {% block PageName %}{% endblock %}</h1>
+  </div>
+<!-- login modal-->
+<div class="modal" id="loginModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Login</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+              </button>
+            </div>
+            <div class="modal-body">
+          <form class="form-signin" method="post">
+            <input type='hidden' name='tokenfield' value='login' />
+            <div class="form-label-group">
+                <label for="inputEmail">Email address</label>
+              <input type="email" id="inputEmail" name="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+            </div>
+
+            <div class="form-label-group">
+                <label for="inputPassword">Password</label>
+                <input type="password" id="inputPassword" name="inputPassword" class="form-control" placeholder="Password" required>
+            </div>
+
+            <div class="checkbox mb-3">
+              <label>
+                <input type="checkbox" value="remember-me"> Remember me
+              </label>
+            </div>
+            <button class="btn btn-lg btn-primary btn-block" type="submit" name="Signin">Sign in</button>
+            <p class="mt-5 mb-3 text-muted text-center">© 2018-2019</p>
+          </form>
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary">Save changes</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+<!-- end login modal-->
+
+<!-- content -->
+
+<div class="container">
+    <div class="content row">
+        <div class="col-md-2">{% block leftNav %}{% endblock %}</div>
+        <div class="col-md-8">{% block content %}{% endblock %}</div>
+    </div>
+</div>
+
+</body>
+</html>
