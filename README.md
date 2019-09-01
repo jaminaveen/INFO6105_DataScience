@@ -2,7 +2,9 @@
 
 <br>
 In this course, we explored the key techniques used in data science, machine learning, analytics and visualization. We understood and developed the end-to-end workflow of the Data science ecosystem. The project covered these concepts:<br>
+
 ![image](https://user-images.githubusercontent.com/37238004/56710089-799d9500-66f2-11e9-821f-840a17add7e1.png)
+
 <br>
  - Data Ingestion <br>
  - Data Exploration <br>
