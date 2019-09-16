@@ -8,10 +8,10 @@ from datetime import datetime, timedelta
 
 # Following are defaults which can be overridden later on
 default_args = {
-    'owner': 'anurag.dhar',
+    'owner': 'naveen.jami',
     'depends_on_past': False,
     'start_date': datetime(2019, 2, 26),
-    'email': ['anuragdhar92@gmail.com'],
+    'email': ['jami.n@husky.neu.edu'],
     'email_on_failure': False,
     'email_on_retry': False,
     'retries': 1,
