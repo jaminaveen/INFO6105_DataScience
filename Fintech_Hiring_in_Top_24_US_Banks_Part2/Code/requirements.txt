@@ -38,7 +38,7 @@ ordereddict==1.1
 pandas==0.24.0
 pdfminer2==20151206
 pendulum==1.4.4
-psutil==5.5.1
+psutil==5.6.6
 psycopg2==2.7.7
 Pygments==2.3.1
 pyparsing==2.3.1
