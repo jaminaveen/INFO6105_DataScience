@@ -22,7 +22,7 @@ The goal of the model is to cover two aspects of Graduate Admission:<br>
 
 <b><u>USING THE APPLICATION</b></u><br>
 #### Assisting Student Model :<br>
-<b>URL for the application:</b> https://grad-school-predictor.herokuapp.com/ <br>
+<b>URL for the application:</b> https://grad-ms-cs-admission-predictor.herokuapp.com/ <br>
 Steps to reproduce:<br> 
 - Covers 2 functionality of showing acceptance.rejection of the college<br>
 - Also displaying him with the list of 5 colleges where they will be likely to get most admits
