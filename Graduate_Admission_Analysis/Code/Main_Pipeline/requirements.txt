@@ -5,7 +5,7 @@ chardet==3.0.4
 Click==7.0
 cloudpickle==0.8.1
 colorama==0.4.1
-dask==1.2.0
+dask==2021.10.0
 docutils==0.14
 Flask==1.0.2
 future==0.17.1
